@@ -3,49 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  <title>JavaScript Calculator</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <div class="calculator-container">
+    <h1>JavaScript Calculator</h1>
+    
+    <!-- Calculator Display -->
+    <div class="calculator">
+      <div class="display" id="display">0</div>
+      
+      <!-- Calculator Buttons -->
+      <div class="buttons">
+        <!-- Clear and Delete buttons -->
+        <button class="btn btn-clear" id="clear-btn">C</button>
+        <button class="btn btn-delete" id="delete-btn">DEL</button>
+        <button class="btn btn-operator" id="divide-btn">÷</button>
+        
+        <!-- Number and operator buttons -->
+        <button class="btn btn-number" data-value="7">7</button>
+        <button class="btn btn-number" data-value="8">8</button>
+        <button class="btn btn-number" data-value="9">9</button>
+        <button class="btn btn-operator" id="multiply-btn">×</button>
+        
+        <button class="btn btn-number" data-value="4">4</button>
+        <button class="btn btn-number" data-value="5">5</button>
+        <button class="btn btn-number" data-value="6">6</button>
+        <button class="btn btn-operator" id="subtract-btn">−</button>
+        
+        <button class="btn btn-number" data-value="1">1</button>
+        <button class="btn btn-number" data-value="2">2</button>
+        <button class="btn btn-number" data-value="3">3</button>
+        <button class="btn btn-operator" id="add-btn">+</button>
+        
+        <button class="btn btn-number" data-value="0">0</button>
+        <button class="btn btn-number" data-value=".">.</button>
+        <button class="btn btn-equals" id="equals-btn">=</button>
+      </div>
+    </div>
+    
+    <!-- History Section -->
+    <div class="history-section">
+      <h2>Calculation History</h2>
+      <div class="history-list" id="history-list">
+        <p class="empty-message">No calculations yet</p>
+      </div>
+      <button class="btn btn-clear-history" id="clear-history-btn">Clear History</button>
+    </div>
+  </div>
 
-  <!-- Main Content -->
-  <main class="main-content">
-    <section id="home">
-      <h1>Welcome to My Portfolio</h1>
-      <p>Discover my work and projects below.</p>
-    </section>
-
-    <section id="portfolio" class="portfolio-container">
-      <article class="portfolio-item">
-        <h3>Project 1</h3>
-        <p>Description of Project 1.</p>
-        <img src="https://via.placeholder.com/300" alt="Project 1">
-      </article>
-      <article class="portfolio-item">
-        <h3>Project 2</h3>
-        <p>Description of Project 2.</p>
-        <img src="https://via.placeholder.com/300" alt="Project 2">
-      </article>
-      <article class="portfolio-item">
-        <h3>Project 3</h3>
-        <p>Description of Project 3.</p>
-        <img src="https://via.placeholder.com/300" alt="Project 3">
-      </article>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer id="footer">
-    <p>&copy; 2024 My Portfolio. All rights reserved.</p>
-  </footer>
+  <script src="index.js"></script>
 </body>
 </html>
